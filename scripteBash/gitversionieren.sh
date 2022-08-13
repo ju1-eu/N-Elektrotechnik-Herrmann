@@ -21,10 +21,10 @@ echo "+ $info"
 # (1) lokales Repository: main
 	# anpassen 
 	# git config --global init.defaultBranch main
-git init # rm -rf .git
-	#git add README.md
-git add .
-git commit -m "Projekt init"
+#git init # rm -rf .git
+#	#git add README.md
+#git add .
+#git commit -m "Projekt init"
 
 # (2) Github Repository:  origin/main
 #git branch -M main
@@ -33,12 +33,12 @@ git commit -m "Projekt init"
 
 # (3) backup Repository:  backupUSB/main
     # anpassen
-repos_USB="/Volumes/USB-DATEN/meineNotizen/repository/notizen-iMac"    
-REPOSITORY="N-Elektrotechnik-Herrmann"
-LESEZEICHEN="backupUSB"
-git clone --no-hardlinks --bare . $repos_USB/$REPOSITORY.git 
-git remote add $LESEZEICHEN $repos_USB/$REPOSITORY.git 
-git push --all $LESEZEICHEN
+#repos_USB="/Volumes/USB-DATEN/meineNotizen/repository/notizen-iMac"    
+#REPOSITORY="N-Elektrotechnik-Herrmann"
+#LESEZEICHEN="backupUSB"
+#git clone --no-hardlinks --bare . $repos_USB/$REPOSITORY.git 
+#git remote add $LESEZEICHEN $repos_USB/$REPOSITORY.git 
+#git push --all $LESEZEICHEN
 #----------------------------------------------------------
 
 # Git-Version
