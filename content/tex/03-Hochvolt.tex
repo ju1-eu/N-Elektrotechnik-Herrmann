@@ -1,4 +1,4 @@
-%ju 13-Aug-22 03-Hochvolt.tex
+%ju 17-Sep-22 03-Hochvolt.tex
 \textbf{Reichweite Batterie} $\sim 770~km$ (MERCEDES EQS (2021) -
 S-KLASSE \footnote{\url{https://www.auto-motor-und-sport.de/})} (Stand:
 Mai/2022)
@@ -6,33 +6,73 @@ Mai/2022)
 \textbf{Spannung Bordnetz} $400~V - 800~V$ (Porsche Taycan, Audi
 e-tron)
 
-\textbf{Batterie laden} 1-Phase ($3,7~Km$), 3-Phasen, Gleichstrom
+\textbf{Batterie laden (Möglichkeiten)}
+
+\begin{itemize}
+\item
+  AC (Wechselstrom) 230 V (1-Phase), umwandeln in Gleichstrom
+  ($3,7~KW/h$)
+
+  \begin{itemize}
+  \item
+    Ladestecker: Typ-2-Ladekabel mit ICCB
+  \end{itemize}
+\item
+  AC (Wechselstrom) 380 V (3-Phasen), umwandeln in Gleichstrom
+  ($11 \dots 22~KW/h$)
+
+  \begin{itemize}
+  \item
+    Ladestecker: Typ-2
+  \end{itemize}
+\item
+  DC (Gleichstrom)
+
+  \begin{itemize}
+  \item
+    Ladestecker: CHAdeMO ($50~KW/h$) / CSS ($50 \dots 350~KW/h$)
+  \end{itemize}
+\end{itemize}
+
+\textbf{Was ist ein Hybridfahrzeug? Hybrid-Vehicle (HV)} ist mit
+mindestens zwei unterschiedlichen Energiewandlern und -speichern für den
+Antrieb des Fahrzeuges ausgestattet.
+
+Beispiel: Verbrennungsmotor und Kraftstofftank \& E-Motor und
+HV-Batterie
+
+\textbf{Was ist Hochvolt?} Ab einer Wechselspannung von AC
+> 30 V und einer Gleichspannung von DC > 60 V.
+
+\textbf{IT-Netz} IT steht für isoliert und Terra (von der Erde
+isoliertes System): Das HV-System ist sowohl wechsel- als auch
+gleichstromseitig von der Fahrzeugmasse galvanisch getrennt oder
+isoliert (nicht geehrtes Stromnetz).
+
+\textbf{Rekuperation (Regeneration)} Bremsenergierückgewinnung,
+Bremsenergie wird in elektrische Energie umgewandelt.
+
+\textbf{Range-Extender} Reichweiten verlängern
+
+\textbf{Boost} Drehmomentunterstützung
 
 \section{Was sind HV-eigensichere
 Fahrzeuge?}\label{was-sind-hv-eigensichere-fahrzeuge}
 
-Gewährleisten einen vollständigen Berühr- und Lichtbogenschutz gegenüber
-HV-System.
+Für den Benutzer durch technische Maßnahmen ein vollständiger Berühr-
+und Lichtbogenschutz gegenüber dem HV-System gewährleistet ist.
 
 \begin{itemize}
 \item
   System überwacht sich selbst
 \item
-  Serienfahrzeug
+  Serienfahrzeug (Direkt vom Hersteller auf die Straße)
 \item
   Sicherheitslinie (Pkw)
-
-  \begin{itemize}
-  \item
-    \textbf{Außer:} Lkw, Busse, Eigenbau (Vorsicht beim Umrüsten und
-    Nachrüsten), Unfallfahrzeug
-  \end{itemize}
+\item
+  \textbf{Außer:} Lkw, Busse, Eigenbau (Vorsicht beim Umrüsten und
+  Nachrüsten), Unfallfahrzeug
 \end{itemize}
-
-\textbf{IT-Netz} IT steht für isoliert und Terra (von der Erde
-isoliertes System): Das HV-System ist sowohl wechsel- als auch
-gleichstromseitig von der Fahrzeugmasse galvanisch getrennt oder
-isoliert.
 
 \section{Qualifikationsstufen}\label{qualifikationsstufen}
 
@@ -47,21 +87,21 @@ Lehrlinge. $\to$ Person sensibilisieren auf jedes Fahrzeug einzeln.
 DGUV 209-093 (Deutsche gesetzliche Unfallversicherung) Qualifizierung
 für Arbeiten an Fahrzeugen mit HV-Systemen.
 
-\textbf{Qualifikationsstufen}
+\subsection{Qualifikationsstufen}\label{qualifikationsstufen-1}
 
 \begin{itemize}
 \item
   \textbf{Stufe S} sensibilisierte Person (Bedienen von Fahrzeugen mit
   HV-System)
 \item
-  \textbf{Stufe 1S} Fachkundige unterwiesene Person (Motto: Hände weg
+  \textbf{Stufe 1S} fachkundige unterwiesene Person (Motto: Hände weg
   von Orange!)
 \item
   \textbf{Stufe 2S} fachkundige Person (alle arbeiten, aber nicht unter
   Spannung, Freischalten)
 \item
   \textbf{Stufe 3S} fachkundige Person -- für Arbeiten unter Spannung
-  stehenden HV-System (Energiespeicher öffnen)
+  stehenden HV-System (Energiespeicher öffnen), erste Hilfe-Schein
 \end{itemize}
 
 \textbf{Welche Qualifikationen sind für folgende Arbeiten notwendig?}
@@ -113,34 +153,50 @@ HV-Systems?}\label{erklaere-das-freischalten-des-hv-systems}
 
 Kunde kommt mit E-Auto in die Werkstatt. Was passiert jetzt?
 
-Beginn Gefahrübergang: mit Schlüsselübergabe + Werkstattauftrag
-unterschrieben
+Beginn Gefahrübergang: mit Schlüsselübergabe + Normalauftrag
+(Garantieauftrag) unterschrieben.
+
+\textbf{Probefahrt} ja der Fehler ist aktuell.
+
+Vorgaben des Herstellers beachten!
 
 \begin{enumerate}
 \item
-  Hütchen mit Magnet aufs Dach $\to$ Achtung Hochspannung!
+  Blitzhütchen >>Hochvolt<< mit Magnet aufs Dach
 \item
   Fahrzeug in Werkstatt fahren
+
+  \begin{itemize}
+  \item
+    fester Platz für HV-Fahrzeug
+  \item
+    HV-Werkzeug, Rettungshaken, Feuerlöscher, Defibrillator
+    (Herzrhythmusstörung beseitigen, Stromstoß)
+  \end{itemize}
 \item
   Abschranken
 
   \begin{itemize}
   \item
-    im Abstand $1~m$ um das Fahrzeug herum
+    Gefahren absperren im Abstand 1,50 m um das Fahrzeug herum
   \item
-    Gefahren absperren: Bedeutung von gelb/schwarzes Band - langfristig
-    oder rot/weiß - kurzfristig
+    Bedeutung von gelb/schwarzes Band - langfristig oder rot/weiß Band -
+    kurzfristig
   \end{itemize}
 \item
-  rotes Schild auf die Windschutzscheibe kleben $\to$ Achtung
-  Hochvolt! Nicht freigeschaltet, mit Namen und Telefonnummer
+  Hinweisblatt rot >>Hochvolt-Spannungen sind eingeschaltet<< auf die
+  Windschutzscheibe kleben, mit Namen und Telefonnummer
 \item
-  Zündung ausschalten und Zündschlüssel entfernen
+  Diagnosetester - Fehlerspeicher auslesen
+\item
+  Zündung ausschalten und Zündschlüssel entfernen (mind. 10 m
+  Entfernung) und wegschließen
 \item
   Sicherheitshandschuhe prüfen und anziehen, Schutzbrille, lange
   Kleidung ohne Reißverschluss (Vgl. Körperwiderstand)
 \item
-  Minuspol der 12 V-Batterie abklemmen
+  Minuspol der 12 V-Batterie abklemmen (Motorhaube, Türen und Kofferraum
+  vorher öffnen)
 \item
   Warten 5 Minuten $\to$ bis Kondensatoren sich entladen von Bordnetz
   und HV-System
@@ -158,36 +214,38 @@ unterschrieben
   vorhanden, Sicherheitslinie unterbrechen
 \item
   Zündschlüssel und Disconnect-Stecker wegschließen (mind. 10 m
-  Entfernung) und sichern gegen wieder einschalten
+  Entfernung) und Fahrzeug gegen Wiedereinschalten sichern
 \item
-  Messen mit dem Duspol
+  Messen mit dem Duspol (geeignetes Messgerät auswählen, Zweipoliger
+  Spannungsprüfer)
 
   \begin{itemize}
   \item
-    Messgerät überprüfen: Hochspannungsbereich 230 V-Steckdose,
-    Niederspannungsbereich 12 V-Batterie
+    Messgerät an sicherer Spannungsquelle überprüfen:
+    Hochspannungsbereich 230 V-Steckdose, Niederspannungsbereich 12
+    V-Batterie
   \item
-    Messung durchführen: am Inverter alle drei Phasen messen
+    Spannungsfreiheit überprüfen: am Inverter alle drei Phasen messen
   \item
-    Messgerät überprüfen (gleiche Spannungsquellen):
-    Hochspannungsbereich 230 V, Niederspannungsbereich 12 V-Batterie
+    Messgerät nochmals überprüfen (gleiche Spannungsquelle)
   \item
     Spannungsfreiheit festgestellt
   \end{itemize}
 \item
-  Dokumentieren über das Freischalten (Was wurde gemacht? Wie wurde das
-  Fahrzeug übergeben?)
+  Protokoll über die Freischaltung führen (Was wurde gemacht? Wie wurde
+  das Fahrzeug übergeben?)
 \item
-  weißes Schild auf die Windschutzscheibe kleben $\to$ Fahrzeug ist
-  spannungsfrei, Fahrzeug gegen Wiedereinschalten gesichert, mit Namen
-  und Telefonnummer
+  Hinweisblatt weiß >>Hochvolt-Spannungen sind sicher ausgeschaltet<<
+  auf die Windschutzscheibe kleben, mit Namen und Telefonnummer
 \item
   Jetzt kann gearbeitet werden.
 \end{enumerate}
 
-Pilotlinie, Interlock, Sicherheitslinie (Niedervolt)
+\textbf{HV-Interlock} Pilotlinie, Sicherheitslinie (überwacht die
+HV-Steckverbindungen)
 
-\textbf{Wie hoch ist der Körperwiderstand ab einer Spannung von 100 V?}
+\subsection{Wie hoch ist der Körperwiderstand ab einer Spannung von 100
+V?}\label{wie-hoch-ist-der-koerperwiderstand-ab-einer-spannung-von-100-v}
 
 Berührung der beiden Batteriepole
 
@@ -206,10 +264,22 @@ führen, sodass sich die Person nicht mehr selbstständig von der
 Spannungsquelle lösen kann. Schon nach wenigen Sekunden könnte es auch
 bei niedrigen Strömen zu tödlichen Unfällen kommen. (Einwirkzeit)
 
-\textbf{Sicherheitshandschuhe prüfen} (rot, bis $1000~V$, vor jedem
-Freischalten)
+\textbf{Wovon hängt es ab, welche Schäden der elektrische Strom im
+menschlichen Körper verursacht?}
 
 \begin{itemize}
+\item
+  der Stromstärke und
+\item
+  der Zeit, für die der Strom den Körper durchfließt
+\end{itemize}
+
+\subsection{Sicherheitshandschuhe
+prüfen}\label{sicherheitshandschuhe-pruefen}
+
+\begin{itemize}
+\item
+  vor jedem Freischalten
 \item
   Handschuh aufdrehen und auf Dichtheit prüfen oder Prüfgerät
 \item
@@ -217,3 +287,165 @@ Freischalten)
 \item
   Aufdruck vollständig
 \end{itemize}
+
+Sicherheitsklasse 0 sind bis 1000 V zugelassen.
+
+\section{Elektromotoren -
+Drehstrommotor}\label{elektromotoren-drehstrommotor}
+
+Sind bürstenlose Motoren (d.~h. keine Kohlestifte = Kohlebürsten; kein
+Schleifring).
+
+\textbf{Drehstrommotor} wird mit Dreiphasenwechselspannung betrieben,
+der in drei Leitern eine periodisch um 120° versetzte Spannung anlegt.
+Dadurch werden in den Statorspulen Magnetfelder induziert, die eine
+Bewegung im Rotor erzeugen. Ein umlaufendes Magnetfeld nimmt einen
+magnetischen Rotor mit, sodass es zu einer Drehbewegung kommt.
+
+\begin{itemize}
+\item
+  \textbf{Stator} steht
+\item
+  \textbf{Rotor} dreht sich
+\end{itemize}
+
+\textbf{Was ist ein Drehfeld?}
+
+Ein Magnetfeld das um den Rotor wandert (rotierendes Magnetfeld).
+
+\subsection{Synchronmotor (Prüfung)}\label{synchronmotor-pruefung}
+
+Der Frequenzumrichter legt eine Dreiphasenwechselspannung an die
+Erregerspulen. Das dadurch erzeugte magnetische Drehfeld des Stators
+setzt den Rotor in Bewegung.
+
+PSM (Permanenterregt)
+
+\begin{itemize}
+\item
+  \textbf{Stator} elektromagnetische Spule wird bestromt und es entsteht
+  ein Drehfeld
+\item
+  \textbf{Rotor} Magnetfeld wird erzeugt durch Dauermagnet, der vom
+  Drehfeld direkt mitgenommen wird.
+\item
+  Stator = Rotor (Drehzahl, mit gleicher Geschwindigkeit)
+\item
+  Ansteuerung: über Inverter / IGBTs
+\end{itemize}
+
+FSM (F‚remderregt)
+
+\begin{itemize}
+\item
+  \textbf{Stator} elektromagnetische Spule
+\item
+  \textbf{Rotor} Magnetfeld wird erzeugt durch Fremderregung,
+  elektromagnetische Spule
+\end{itemize}
+
+\subsection{Asynchronmotor (Prüfung)}\label{asynchronmotor-pruefung}
+
+Das Magnetfeld des Rotors muss erst erzeugt werden.
+
+ASM (Induktionsmotor)
+
+\begin{itemize}
+\item
+  \textbf{Stator} elektromagnetische Spule
+\item
+  \textbf{Rotor} Kurzschlussläufer (Bauform, Käfigläufer), die Enden der
+  Spulen werden gemeinsam verbunden. Die induzierte Spannung wird
+  kurzgeschlossen und es fließt ein hoher Strom, der das Magnetfeld
+  erzeugt.
+\item
+  Stator $\neq$ Rotor (Drehzahl, nicht mit gleicher Geschwindigkeit)
+\item
+  Stator = Rotor (Kraft NULL)
+\end{itemize}
+
+Die Drehzahl wird über die Frequenz des Erregerfeldes eingestellt.
+
+\textbf{Schlupf} unterschied zwischen Rotordrehzahl und Drehzahl des
+Erregerfeldes. Asynchronmotoren laufen immer etwas langsamer als das
+angelegte Erregerfeld.
+
+\section{HV-Komponenten}\label{hv-komponenten}
+
+\begin{enumerate}
+\item
+  \textbf{HV-Batterie} Lithium-Ionen, Nickel-Metallhydrid
+\item
+  \textbf{DC/DC-Wandler} (Konverter, Gleichstromwandler)
+  Spannungswandler zwischen HV-Netz und 12-V-Bordnetz
+\item
+  \textbf{Inverter} (Pulswechselrichter)
+
+  \begin{itemize}
+  \item
+    Leistungselektronik
+
+    \begin{itemize}
+    \item
+      Umwandlung DC $\to$ AC, Gleichrichten AC $\to$ DC
+    \item
+      Laden der HV-Batterie
+    \item
+      Antrieb der Motorgeneratoren (MG, E-Maschine) und Klimakompressor
+    \item
+      \textbf{IGBT} (Aufbau: Mosfet + Bipolarer Transistor), Wie?
+      $\to$ Mit PWM-Signal werden die Spulen der Elektromotoren
+      angesteuert. Durch eine Frequenzweitenmodulation lässt sich die
+      Frequenz des Wechselstroms verändern.
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{Ladeelektronik} Batterie-Balancing
+
+  \begin{itemize}
+  \item
+    Aktiv Balancing (Ladungsausgleich der einzelnen Batteriezellen)
+  \item
+    Passiv Balancing, wenn Zelle bei 100 \%, dann über Widerstand
+    (Wärme)
+  \end{itemize}
+\item
+  \textbf{Batteriemanagementsystem} (BMS) Batterieüberwachung
+\item
+  \textbf{E-Maschine} (E-Motor / Generator)
+\end{enumerate}
+
+\textbf{Energiefluss}
+
+\begin{enumerate}
+\item
+  \textbf{Elektroantrieb} HV-Batterie - Inverter - E-Motor
+\item
+  \textbf{Generatorbetrieb} Generator - Gleichrichter - HV-Batterie
+\item
+  \textbf{Bordnetzversorgung} MG - DC/DC Wandler - 12-V-Batterie
+\item
+  \textbf{AC-Laden} Ladesteckdose - Gleichrichter - HV-Batterie
+\end{enumerate}
+
+\section{Hauptrelais oder Trennrelais oder
+Sicherheitsrelais}\label{hauptrelais-oder-trennrelais-oder-sicherheitsrelais}
+
+\textbf{Einschalten der Zündung und betriebsbereiten Zustand}
+
+\begin{itemize}
+\item
+  Relais 3 ($\text{HV}_-$) und Relais 1 ($\text{HV}_+$) mit
+  Widerstand (begrenzter Stromfluss für Kondensatoren) geschlossen und
+  Relais 2 offen
+\item
+  Lädt die Kondensatoren auf
+\item
+  Isolationsprüfung (Isolationsfehler oder Stecker ab $\to$
+  Sicherheitslinie offen)
+\item
+  Fahrbereit
+\end{itemize}
+
+\textbf{Ausschalten der Zündung} trennen die Relais die HV-Spannung vom
+HV-Netz
