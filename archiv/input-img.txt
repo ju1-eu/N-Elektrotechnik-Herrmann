@@ -1,7 +1,7 @@
 <!-----------------------------------------------
 Alle Abbildungen 'images/' in Markdown speichern.
 	* 'archiv/input-img.txt'
-ju 16-Dez-2022 input-img.txt
+ju 31-Dez-2022 input-img.txt
 ------------------------------------------------->
 
 
@@ -20,6 +20,11 @@ ju 16-Dez-2022 input-img.txt
 ![titelbild](images/titelbild.pdf){width=60%}
 
 
+<!--01_Anordnung-der-Nockenwelle_Skizze vgl. abb.-->
+
+![01_Anordnung-der-Nockenwelle_Skizze](images/Skizze/01_Anordnung-der-Nockenwelle_Skizze.pdf){width=60%}
+
+
 <!--01_Generatorregel_Skizze vgl. abb.-->
 
 ![01_Generatorregel_Skizze](images/Skizze/01_Generatorregel_Skizze.pdf){width=60%}
@@ -30,14 +35,39 @@ ju 16-Dez-2022 input-img.txt
 ![01_Schaltung_Messen_Skizze](images/Skizze/01_Schaltung_Messen_Skizze.pdf){width=60%}
 
 
+<!--01_Verkaufskalkulation_Skizze vgl. abb.-->
+
+![01_Verkaufskalkulation_Skizze](images/Skizze/01_Verkaufskalkulation_Skizze.pdf){width=60%}
+
+
 <!--02_Motorregel_Skizze vgl. abb.-->
 
 ![02_Motorregel_Skizze](images/Skizze/02_Motorregel_Skizze.pdf){width=60%}
 
 
+<!--02_Nockenformen_Skizze vgl. abb.-->
+
+![02_Nockenformen_Skizze](images/Skizze/02_Nockenformen_Skizze.pdf){width=60%}
+
+
 <!--02_Schaltung_Messen_Skizze vgl. abb.-->
 
 ![02_Schaltung_Messen_Skizze](images/Skizze/02_Schaltung_Messen_Skizze.pdf){width=60%}
+
+
+<!--02_Umsatzerloese_Skizze vgl. abb.-->
+
+![02_Umsatzerloese_Skizze](images/Skizze/02_Umsatzerloese_Skizze.pdf){width=60%}
+
+
+<!--03_Arten-von-Ventilbetaetigung_Skizze vgl. abb.-->
+
+![03_Arten-von-Ventilbetaetigung_Skizze](images/Skizze/03_Arten-von-Ventilbetaetigung_Skizze.pdf){width=60%}
+
+
+<!--03_Kalkulationsfaktor_Skizze vgl. abb.-->
+
+![03_Kalkulationsfaktor_Skizze](images/Skizze/03_Kalkulationsfaktor_Skizze.pdf){width=60%}
 
 
 <!--03_Schaltung_Messen_Skizze vgl. abb.-->
@@ -53,6 +83,16 @@ ju 16-Dez-2022 input-img.txt
 <!--04_Stromdichte_Skizze vgl. abb.-->
 
 ![04_Stromdichte_Skizze](images/Skizze/04_Stromdichte_Skizze.pdf){width=60%}
+
+
+<!--04_Ventilspielausgleich_Skizze vgl. abb.-->
+
+![04_Ventilspielausgleich_Skizze](images/Skizze/04_Ventilspielausgleich_Skizze.pdf){width=60%}
+
+
+<!--05_Dreiventiltechnik_Skizze vgl. abb.-->
+
+![05_Dreiventiltechnik_Skizze](images/Skizze/05_Dreiventiltechnik_Skizze.pdf){width=60%}
 
 
 <!--05_StromdurchflossenerLeiter_Skizze vgl. abb.-->
@@ -180,11 +220,6 @@ ju 16-Dez-2022 input-img.txt
 ![Logo2](images/Logo/Logo2.pdf){width=60%}
 
 
-<!--Logo3 vgl. abb.-->
-
-![Logo3](images/Logo/Logo3.pdf){width=60%}
-
-
 <!--logo-eps-converted-to vgl. abb.-->
 
 ![logo-eps-converted-to](images/Logo/logo-eps-converted-to.pdf){width=60%}
@@ -193,10 +228,5 @@ ju 16-Dez-2022 input-img.txt
 <!--logo vgl. abb.-->
 
 ![logo](images/Logo/logo.pdf){width=60%}
-
-
-<!--titelbild vgl. abb.-->
-
-![titelbild](images/Logo/titelbild.pdf){width=60%}
 
 
