@@ -1,4 +1,4 @@
-%ju 17-Sep-22 03-Hochvolt.tex
+%ju 16-Dez-22 03-Hochvolt.tex
 \textbf{Reichweite Batterie} $\sim 770~km$ (MERCEDES EQS (2021) -
 S-KLASSE \footnote{\url{https://www.auto-motor-und-sport.de/})} (Stand:
 Mai/2022)
@@ -7,6 +7,13 @@ Mai/2022)
 e-tron)
 
 \textbf{Batterie laden (Möglichkeiten)}
+
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.7\textwidth]{images/HV/HV-1.pdf}
+\caption{Ladestecker, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
 
 \begin{itemize}
 \item
@@ -148,8 +155,18 @@ für Arbeiten an Fahrzeugen mit HV-Systemen.
   \end{itemize}
 \end{enumerate}
 
+\newpage
+
 \section{Erkläre das Freischalten des
 HV-Systems?}\label{erklaere-das-freischalten-des-hv-systems}
+
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.2\textwidth]{images/HV/HV-8.pdf}
+\caption{Blitzhütchen (Gefährliche Spannung) + Gegen Wiedereinschalten
+gesichert, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
 
 Kunde kommt mit E-Auto in die Werkstatt. Was passiert jetzt?
 
@@ -244,6 +261,13 @@ Vorgaben des Herstellers beachten!
 \textbf{HV-Interlock} Pilotlinie, Sicherheitslinie (überwacht die
 HV-Steckverbindungen)
 
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.4\textwidth]{images/HV/HV-7.pdf}
+\caption{Sicherheitslinie, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
+
 \subsection{Wie hoch ist der Körperwiderstand ab einer Spannung von 100
 V?}\label{wie-hoch-ist-der-koerperwiderstand-ab-einer-spannung-von-100-v}
 
@@ -309,11 +333,27 @@ magnetischen Rotor mit, sodass es zu einer Drehbewegung kommt.
   \textbf{Rotor} dreht sich
 \end{itemize}
 
+\newpage
+
 \textbf{Was ist ein Drehfeld?}
+
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.3\textwidth]{images/HV/HV-9.pdf}
+\caption{Drehfeld, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
 
 Ein Magnetfeld das um den Rotor wandert (rotierendes Magnetfeld).
 
 \subsection{Synchronmotor (Prüfung)}\label{synchronmotor-pruefung}
+
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.6\textwidth]{images/HV/HV-6.pdf}
+\caption{Synchronmotor, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
 
 Der Frequenzumrichter legt eine Dreiphasenwechselspannung an die
 Erregerspulen. Das dadurch erzeugte magnetische Drehfeld des Stators
@@ -323,8 +363,8 @@ PSM (Permanenterregt)
 
 \begin{itemize}
 \item
-  \textbf{Stator} elektromagnetische Spule wird bestromt und es entsteht
-  ein Drehfeld
+  \textbf{Stator} die elektromagnetischen Spulen (Erregerspulen) werden
+  bestromt und es entsteht ein magnetisches Drehfeld (Erregerfeld)
 \item
   \textbf{Rotor} Magnetfeld wird erzeugt durch Dauermagnet, der vom
   Drehfeld direkt mitgenommen wird.
@@ -334,7 +374,7 @@ PSM (Permanenterregt)
   Ansteuerung: über Inverter / IGBTs
 \end{itemize}
 
-FSM (F‚remderregt)
+FSM (Fremderregt)
 
 \begin{itemize}
 \item
@@ -346,18 +386,26 @@ FSM (F‚remderregt)
 
 \subsection{Asynchronmotor (Prüfung)}\label{asynchronmotor-pruefung}
 
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.4\textwidth]{images/HV/HV-5.pdf}
+\caption{Asynchronmotor, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
+
 Das Magnetfeld des Rotors muss erst erzeugt werden.
 
 ASM (Induktionsmotor)
 
 \begin{itemize}
 \item
-  \textbf{Stator} elektromagnetische Spule
+  \textbf{Stator} die elektromagnetischen Spulen (Erregerspulen) werden
+  bestromt und es entsteht ein magnetisches Drehfeld (Erregerfeld)
 \item
   \textbf{Rotor} Kurzschlussläufer (Bauform, Käfigläufer), die Enden der
   Spulen werden gemeinsam verbunden. Die induzierte Spannung wird
   kurzgeschlossen und es fließt ein hoher Strom, der das Magnetfeld
-  erzeugt.
+  erzeugt. Rotor wird vom Drehfeld mitgenommen (mit Schlupf)
 \item
   Stator $\neq$ Rotor (Drehzahl, nicht mit gleicher Geschwindigkeit)
 \item
@@ -370,7 +418,16 @@ Die Drehzahl wird über die Frequenz des Erregerfeldes eingestellt.
 Erregerfeldes. Asynchronmotoren laufen immer etwas langsamer als das
 angelegte Erregerfeld.
 
+\newpage
+
 \section{HV-Komponenten}\label{hv-komponenten}
+
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.5\textwidth]{images/HV/HV-3.pdf}
+\caption{Lithium-Ionen-Batterie, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
 
 \begin{enumerate}
 \item
@@ -415,6 +472,10 @@ angelegte Erregerfeld.
   \textbf{E-Maschine} (E-Motor / Generator)
 \end{enumerate}
 
+\textbf{SOC} Ladezustand vom Akku
+
+\textbf{SOH} Alterungszustand vom Akku
+
 \textbf{Energiefluss}
 
 \begin{enumerate}
@@ -428,8 +489,17 @@ angelegte Erregerfeld.
   \textbf{AC-Laden} Ladesteckdose - Gleichrichter - HV-Batterie
 \end{enumerate}
 
+\newpage
+
 \section{Hauptrelais oder Trennrelais oder
 Sicherheitsrelais}\label{hauptrelais-oder-trennrelais-oder-sicherheitsrelais}
+
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.7\textwidth]{images/HV/HV-2.pdf}
+\caption{Hauptrelais, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
 
 \textbf{Einschalten der Zündung und betriebsbereiten Zustand}
 
@@ -449,3 +519,10 @@ Sicherheitsrelais}\label{hauptrelais-oder-trennrelais-oder-sicherheitsrelais}
 
 \textbf{Ausschalten der Zündung} trennen die Relais die HV-Spannung vom
 HV-Netz
+
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.7\textwidth]{images/HV/HV-4.pdf}
+\caption{Elektrofahrzeug, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}

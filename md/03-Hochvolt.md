@@ -9,9 +9,9 @@ bibliography: literatur-kfz.bib
 csl: zitierstil-number.csl
 ---
 <!-----------------------------
-Quelle: Europa-Verlag SimKfz
-![, Quelle: Europa-Verlag SimKfz](images/HV/.png){width=70%}
-ju 15-9-22 Hochvolt
+Quelle: Europa-Verlag
+![, Quelle: Europa-Verlag](images/HV/.pdf){width=70%}
+ju 10-12-22 Hochvolt
 +------------------------------>
 
 **Reichweite Batterie** $\sim 770~km$ (MERCEDES EQS (2021) - S-KLASSE [^1] (Stand: Mai/2022)         
@@ -21,6 +21,8 @@ ju 15-9-22 Hochvolt
 **Spannung Bordnetz** $400~V - 800~V$ (Porsche Taycan, Audi e-tron)
 
 **Batterie laden (Möglichkeiten)** 
+
+![Ladestecker, Quelle: Europa-Verlag](images/HV/HV-1.pdf){width=70%}
 
 - AC (Wechselstrom) 230 V (1-Phase), umwandeln in Gleichstrom ($3,7~KW/h$)
     - Ladestecker: Typ-2-Ladekabel mit ICCB
@@ -89,7 +91,10 @@ DGUV 209-093 (Deutsche gesetzliche Unfallversicherung) Qualifizierung für Arbei
 1. **Nach Unfall lässt sich Mercedes Vito E-Cell nicht mehr über Service-Disconnect-Stecker spannungsfrei schalten**
     - Fachkundige Person -- für Arbeiten unter Spannung stehenden HV-System
 
+\newpage
 # Erkläre das Freischalten des HV-Systems?
+
+![Blitzhütchen (Gefährliche Spannung) + Gegen Wiedereinschalten gesichert, Quelle: Europa-Verlag](images/HV/HV-8.pdf){width=20%}
 
 Kunde kommt mit E-Auto in die Werkstatt. Was passiert jetzt?
 
@@ -128,6 +133,8 @@ Vorgaben des Herstellers beachten!
 
 **HV-Interlock** Pilotlinie, Sicherheitslinie (überwacht die HV-Steckverbindungen)
 
+![Sicherheitslinie, Quelle: Europa-Verlag](images/HV/HV-7.pdf){width=40%}
+
 ## Wie hoch ist der Körperwiderstand ab einer Spannung von 100 V?
 
 Berührung der beiden Batteriepole
@@ -161,42 +168,52 @@ Sind bürstenlose Motoren (d. h. keine Kohlestifte = Kohlebürsten; kein Schleif
 - **Stator** steht
 - **Rotor** dreht sich
 
+\newpage
 **Was ist ein Drehfeld?**
+
+![Drehfeld, Quelle: Europa-Verlag](images/HV/HV-9.pdf){width=30%}
 
 Ein Magnetfeld das um den Rotor wandert (rotierendes Magnetfeld).
 
 ## Synchronmotor (Prüfung)
 
+![Synchronmotor, Quelle: Europa-Verlag](images/HV/HV-6.pdf){width=60%}
+
 Der Frequenzumrichter legt eine Dreiphasenwechselspannung an die Erregerspulen. Das dadurch erzeugte magnetische Drehfeld des Stators setzt den Rotor in Bewegung.
 
 PSM (Permanenterregt)
 
-- **Stator** elektromagnetische Spule wird bestromt und es entsteht ein Drehfeld
+- **Stator** die elektromagnetischen Spulen  (Erregerspulen) werden bestromt und es entsteht ein magnetisches Drehfeld (Erregerfeld)
 - **Rotor** Magnetfeld wird erzeugt durch Dauermagnet, der vom Drehfeld direkt mitgenommen wird.
 - Stator = Rotor (Drehzahl, mit gleicher Geschwindigkeit)
 - Ansteuerung: über Inverter / IGBTs
 
-FSM (F‚remderregt)
+FSM (Fremderregt)
 
 - **Stator** elektromagnetische Spule 
 - **Rotor** Magnetfeld wird erzeugt durch Fremderregung, elektromagnetische Spule 
 
 ## Asynchronmotor (Prüfung)
 
+![Asynchronmotor, Quelle: Europa-Verlag](images/HV/HV-5.pdf){width=40%}
+
 Das Magnetfeld des Rotors muss erst erzeugt werden. 
 
 ASM (Induktionsmotor)
 
-- **Stator** elektromagnetische Spule 
-- **Rotor** Kurzschlussläufer (Bauform, Käfigläufer), die Enden der Spulen werden gemeinsam verbunden. Die induzierte Spannung wird kurzgeschlossen und es fließt ein hoher Strom, der das Magnetfeld erzeugt. 
+- **Stator** die elektromagnetischen Spulen (Erregerspulen) werden bestromt und es entsteht ein magnetisches Drehfeld (Erregerfeld)
+- **Rotor** Kurzschlussläufer (Bauform, Käfigläufer), die Enden der Spulen werden gemeinsam verbunden. Die induzierte Spannung wird kurzgeschlossen und es fließt ein hoher Strom, der das Magnetfeld erzeugt. Rotor wird vom Drehfeld mitgenommen (mit Schlupf)
 - Stator $\neq$ Rotor (Drehzahl, nicht mit gleicher Geschwindigkeit)
 - Stator = Rotor (Kraft NULL)
 
 Die Drehzahl wird über die Frequenz des Erregerfeldes eingestellt. 
 
-**Schlupf** unterschied zwischen Rotordrehzahl und Drehzahl des Erregerfeldes.  Asynchronmotoren laufen immer etwas langsamer als das angelegte Erregerfeld.
+**Schlupf** unterschied zwischen Rotordrehzahl und Drehzahl des Erregerfeldes. Asynchronmotoren laufen immer etwas langsamer als das angelegte Erregerfeld.
 
+\newpage
 # HV-Komponenten
+
+![Lithium-Ionen-Batterie, Quelle: Europa-Verlag](images/HV/HV-3.pdf){width=50%}
 
 1. **HV-Batterie** Lithium-Ionen, Nickel-Metallhydrid
 1. **DC/DC-Wandler** (Konverter, Gleichstromwandler) Spannungswandler zwischen HV-Netz und 12-V-Bordnetz
@@ -212,6 +229,10 @@ Die Drehzahl wird über die Frequenz des Erregerfeldes eingestellt.
 1. **Batteriemanagementsystem** (BMS) Batterieüberwachung
 1. **E-Maschine** (E-Motor / Generator)
 
+**SOC** Ladezustand vom Akku
+
+**SOH** Alterungszustand vom Akku
+
 **Energiefluss**
 
 1. **Elektroantrieb** HV-Batterie - Inverter - E-Motor
@@ -219,7 +240,10 @@ Die Drehzahl wird über die Frequenz des Erregerfeldes eingestellt.
 1. **Bordnetzversorgung** MG - DC/DC Wandler - 12-V-Batterie
 1. **AC-Laden** Ladesteckdose - Gleichrichter - HV-Batterie
 
+\newpage
 # Hauptrelais oder Trennrelais oder Sicherheitsrelais
+
+![Hauptrelais, Quelle: Europa-Verlag](images/HV/HV-2.pdf){width=70%}
 
 **Einschalten der Zündung und betriebsbereiten Zustand**
 
@@ -229,3 +253,5 @@ Die Drehzahl wird über die Frequenz des Erregerfeldes eingestellt.
 - Fahrbereit
 
 **Ausschalten der Zündung** trennen die Relais die HV-Spannung vom HV-Netz
+
+![Elektrofahrzeug, Quelle: Europa-Verlag](images/HV/HV-4.pdf){width=70%}

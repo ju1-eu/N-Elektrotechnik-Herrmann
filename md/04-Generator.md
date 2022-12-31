@@ -9,25 +9,15 @@ bibliography: literatur-kfz.bib
 csl: zitierstil-number.csl
 ---
 <!-----------------------------
-Quelle: Europa-Verlag SimKfz
-![, Quelle: Europa-Verlag SimKfz](images/Generator/.png){width=70%}
-ju 15-9-22 Generator
+Quelle: Europa-Verlag
+![, Quelle: Europa-Verlag](images/Generator/.png){width=70%}
+ju 6-10-22 Generator
 +------------------------------>
 **Drehstromgenerator / Lichtmaschine / Generator**
 
-Quelle: Fabian Lindenberg, Kfz-Technik einfach erklärt 
-
-Video 1: Generator, Gleichrichter [^1]
-
-Video 2: Multifunktionsregler, Spannungsregelung, Fehlersuchplan Generator [^2]
-
-Video 3: Generator [^3]
-
-[^1]: <https://www.youtube.com/watch?v=cA1yjogKJrU>
+Quelle: Fabian Lindenberg, Kfz-Technik einfach erklärt [^2]
 
 [^2]: <https://www.youtube.com/watch?v=O7ydsAZ6bes>
-
-[^3]: <https://www.youtube.com/watch?v=FSdNMMg0C3Y&list=UU_oTkbc9XDAUBDgjLnpssSw&index=15>
 
 # Komponenten
 
@@ -43,7 +33,13 @@ Video 3: Generator [^3]
 
 **Klauenpolläufer** 12 Pole (je 6 Nord- und Südpole) x 3 Statorspulen = 36 Halbwellen = 1x Umdrehung. Batterie und Kondensator glättet die Gleichspannung.
 
+![Generatoraufbau - Drei Ständerwicklungen U,V,W und ein Polrad](images/Generator/Generator-11.pdf){width=40%} 
+
+![3 Wechselspannungen mit 120° Phasenverschiebung](images/Generator/Generator-8.pdf){width=40%} 
+
 # Multifunktionsregler
+
+![Schaltung Generator mit Multifunktionsregler, Quelle: Europa-Verlag](images/Generator/Generator-1.pdf){width=85%} 
 
 **Merkmale**
 
@@ -65,6 +61,8 @@ Video 3: Generator [^3]
 - Erregungsunterbrechung
 - Überspannung
 - Keilriemen gerissen
+- Leitungsunterbrechung
+- Defekte Masseverbindung
 
 **Generator Anschluss**
 
@@ -97,6 +95,12 @@ Video 3: Generator [^3]
 1. Minusseitig eine Sperrdiode defekt $\to$ Eine Welle wäre weg, Leistung von der Spule fehlt
 1. Erregerdiode defekt $\to$ Ladespannung geht runter
 
+![Generator Gutbild, Quelle: Europa-Verlag](images/Generator/Generator-2.pdf){width=40%} 
+ 
+
+![Generator Fehler - Unterbrechung einer Minusdiode, Quelle: Europa-Verlag](images/Generator/Generator-5.pdf){width=40%} 
+
+\newpage
 # Energieumwandlung 
 
 kinetische Energie + elektrische Energie (Drehmoment) $\to$ **Generator** $\to$ elektrische Energie
@@ -118,6 +122,10 @@ Rechte-Handregel: Magnetfeld bestimmen
 1. Stärke des Magnetfeldes
 1. Fläche
 
+![Drehstrom - Brückenschaltung](images/Generator/Generator-6.pdf){width=30%} 
+
+![Gleichrichtung der Generatorspannung](images/Generator/Generator-7.pdf){width=30%} 
+
 \newpage
 # Energiefluss
 
@@ -133,21 +141,39 @@ Rechte-Handregel: Magnetfeld bestimmen
 
 **Spannungsregler** regelt den Erregerstrom und variiert damit die Stärke des Magnetfeldes. **Ladespannung ist Konst.** bei allen Motordrehzahlen (Leerlauf - Vollast) u. Belastungen (Verbraucher). **Wie?** Je stärker das Magnetfeld, desto größer ist die Spannung die in den Statorspulen induziert wird.
 
+
+
 \newpage
 # Schaltung
 
+![Schaltung Generator mit Transistorregler, Quelle: Europa-Verlag](images/Generator/Generator-9.pdf){width=85%} 
+
 Zündung an, Motor steht
 
-**Vorerregerstromkreis** B+ $\to$ Fahrtschalter $\to$ Ladekontrolllampe $\to$ D+ $\to$ Erregerwicklung $\to$ Regler DF $\to$ Masse $\to$ B-
+**Vorerregerstromkreis (blau)** B+ $\to$ Fahrtschalter $\to$ Ladekontrolllampe $\to$ D+ $\to$ Erregerwicklung $\to$ Regler DF $\to$ Masse $\to$ B-
 
 Zündung an, Motor läuft
 
-**Erregerstromkreis** Ständerwicklung $\to$ Erregerdioden $\to$ D+ $\to$ Erregerwicklung $\to$ Regler DF $\to$ Regler D- $\to$ Minusdioden $\to$ Ständerwicklung
+**Erregerstromkreis (grün)** Ständerwicklung $\to$ Erregerdioden $\to$ D+ $\to$ Erregerwicklung $\to$ Regler DF $\to$ Regler D- $\to$ Minusdioden $\to$ Ständerwicklung
 
-**Ladestromkreis** Ständerwicklung $\to$  Plusdioden $\to$  B+ $\to$ Verbraucher $\to$ Masse $\to$  Minusdioden $\to$ Ständerwicklung
+**Ladestromkreis (rot)** Ständerwicklung $\to$  Plusdioden $\to$  B+ $\to$ Verbraucher $\to$ Masse $\to$  Minusdioden $\to$ Ständerwicklung
 
-![Schaltung Drehstromgenerator, Quelle: Europa-Verlag SimKfz](images/Generator/Drehstromgenerator.png){width=70%} 
 
-![Schaltung Generator mit Multifunktionsregler, Quelle: Europa-Verlag SimKfz](images/Generator/Generator-Multifunktionsregler.png){width=70%} 
+\newpage
+![Schaltung Generator mit Multifunktionsregler, Quelle: Europa-Verlag](images/Generator/Generator-10.pdf){width=85%} 
+
+**Vorerregerstromkreis (blau)** B+ $\to$ Erregerwicklung $\to$ Regler DF $\to$ Reglerendstufe $\to$ B-
+
+Zündung an, Motor läuft
+
+**Erregerstromkreis (grün)** Ständerwicklung $\to$ Plusdioden $\to$ Regler B+ $\to$ Regler DF $\to$ Erregerwicklung $\to$ Regler D- $\to$  Regler B- $\to$ Minusdioden $\to$ Ständerwicklung
+
+**Ladestromkreis (rot)** Ständerwicklung $\to$  Plusdioden $\to$  B+ $\to$ Verbraucher $\to$ Masse $\to$  Minusdioden $\to$ Ständerwicklung
+
+
+
+
+
+
 
 

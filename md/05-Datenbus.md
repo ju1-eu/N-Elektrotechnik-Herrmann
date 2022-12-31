@@ -9,11 +9,11 @@ bibliography: literatur-kfz.bib
 csl: zitierstil-number.csl
 ---
 <!-----------------------------
-Quelle: Europa-Verlag SimKfz
-![, Quelle: Europa-Verlag SimKfz](images/CAN/.png){width=70%}
+Quelle: Europa-Verlag
+![, Quelle: Europa-Verlag](images/CAN-Bus/.png){width=70%}
 
 Quelle: Europa-Verlag Arbeitsblätter Kfz-Technik Lernfeld 9-14
-ju 15-9-22 Datenbus
+ju 15-12-22 Datenbus
 +------------------------------>
 
 Quelle: Fabian Lindenberg, Kfz-Technik einfach erklärt [^1]
@@ -49,38 +49,57 @@ Quelle: Fabian Lindenberg, Kfz-Technik einfach erklärt [^1]
 \newpage
 # Datenbusstrukturen - Topologie - Netzwerkstruktur
 
+![Datenbusstrukturen, Quelle: Europa-Verlag](images/CAN-Bus/CAN-Bus-6.pdf){width=50%} 
+
 1. **Sternstruktur:** (Gateway / Router $\leftrightarrow$ PC / Handy / Tablet / Drucker usw.)
     - **aktiv** (Ein Steuergerät im Zentrum eine sternförmig aufgebauten Datennetzes ist über Punkt-zu-Punkt-Verbindungen mit dem benachbarten Steuergerät verbunden.), **passiv** (Leitungsknoten in der Mitte)
-1. **Daisy-Chain:** Steuergeräte sind wie die Glieder einer Kette aneinander gereiht. (Gateway $\to$ PC $\to$ PC $\to$ PC $\to$ TV)
+1. **Daisy-Chain:** Steuergeräte sind wie die Glieder einer Kette/Reihe aneinander gereiht. (Gateway $\to$ PC $\to$ PC $\to$ PC $\to$ TV)
 1. **Busstruktur / Linear:** CAN-Bus (Datenbusleitung, Knotenpunkte, $SG_1 \Longleftrightarrow SG_2 \Longleftrightarrow SG_3 \Longleftrightarrow SG_n$)
 1. **Ringstruktur** (Most) Nachteil: Bei fehlerhaften Lichtwellenleiter oder Steuergerät fällt die gesamte Kommunikation aus.
-1. **Hybrid** (mehrere Busse)
-1. **Maschen**
+1. **Hybrid** (mehrere Busse, Stern-Bus oder Stern-Ring)
+1. **Maschen** (hohe Ausfallsicherheit)
 
-*Bemerkung:* Datenbusleitungen sind miteinander verdrillt (twisted pair), um elektromagnetische Auswirkungen  von einem auf den anderen Draht zu minimieren. Durch die gegensätzliche Spannungsänderung heben sich die bei jeder Umschaltung entstehenden Magnetfelder beide Leitungen gegenseitig auf. Die Leitungen sind nach außen elektromagnetisch neutral. (**EMV** Elektromagnetischen Verträglichkeit)
-
-![Topologie-Datennetzwerk-Gesamtfahrzeug, Quelle: Europa-Verlag SimKfz](images/CAN/Topologie-Datennetzwerk-Gesamtfahrzeug.png){width=90%} 
+*Bemerkung:* Datenbusleitungen sind miteinander verdrillt (twisted pair), um elektromagnetische Auswirkungen  von einem auf den anderen Draht zu minimieren. Durch die gegensätzliche Spannungsänderung heben sich die bei jeder Umschaltung entstehenden Magnetfelder beider Leitungen gegenseitig auf. Die Leitungen sind nach außen elektromagnetisch neutral. (**EMV** Elektromagnetischen Verträglichkeit)
 
 \newpage
-# CAN Klassen
+# Klassifikation von Bussystemen
 
-1. **CAN Class B** (Lowspeed)
-    - bis ca. 125 kbit/s
-    - **Eindrahtfähig**  wenn die Datenkommunikation gegeben ist, auch wenn eine Busleitung ausfällt
+**Nenne Merkmale des CAN-Datenbus** 
+
+1. **Klasse A**
+    - LIN bis 10 kBit/s
+    - Vernetzung von Aktoren und Sensoren
+
+1. **Klasse B** (Lowspeed-CAN, CAN-B, Komfortbereich)
+    - bis 125 kBit/s
+    - **Eindrahtfähig**  Datenkommunikation ist gegeben, auch wenn eine Busleitung ausfällt
     - keine Abschlusswiderstände 
-    - **Dominant 0** low: 1 V und high: 4 V
-    - **Rezessiv 1** low: 5 V und high: 0 V
+    - **Dominanter Pegel 0** low: 1,4 V und high: 3,6 V (Quelle: Bosch S.1693, 30. Auflage)
+    - **Rezessiver Pegel 1** low: 5 V und high: 0 V 
 
-1. **CAN Class C** (Highspeed)
-    - bis ca. 1 Mbit/s
+1. **Klasse C** (Highspeed-CAN, CAN-C, Antriebs- und Fahrwerkbereich)
+    - Datenrate bis 1 MBit/s
     - Nicht Eindrahtfähig
-    - Abschlusswiderstände $2\text{x } 60~\Omega$
-    - **Dominant 0** low: 1,5 V und high: 3,5 V
-    - **Rezessiv 1** low: 2,5 V und high: 2,5 V
+    - Abschlusswiderstand im Steuergerät
+    - Leitungen sind verdrillt
+    - CAN-High
+    - CAN-Low
+    - keine Potenzialverteiler
+    - oder Potenzialverteiler mit Abschlusswiderständen
+    - **Dominanter Pegel 0** low: 1,5 V und high: 3,5 V (Quelle: Bosch S.1693, 30. Auflage)
+    - **Rezessiver Pegel 1** low: 2,5 V und high: 2,5 V 
 
 1. **CAN FD** (Flexible Data)
-    - bis ca. 8 Mbit/s
+    - bis ca. 8 MBit/s
     - Erst wenn die Daten kommen, wird die Geschwindigkeit hoch geschaltet.
+
+1. **Klasse C+**
+    - FlexRay bis 10 MBit/s
+    - Antriebs- und Fahrwerkbereich
+
+1. **Klasse D**
+    - MOST, Ethernet ab 10 MBit/s
+    - Telematik-, Multimediabereich
 
 **Multi-Master** Alle Steuergeräte sind gleichberechtigt. Regelung erfolgt nach Priorität.
 
@@ -91,9 +110,9 @@ Quelle: Fabian Lindenberg, Kfz-Technik einfach erklärt [^1]
 
 Steuergerät sendet Nachricht auf den Datenbus. 
 
-![Aufbau CAN-Datenbus, Quelle: Europa-Verlag SimKfz](images/CAN/Aufbau-CAN-Datenbus.png){width=60%} 
+![Aufbau CAN-Datenbus, Quelle: Europa-Verlag](images/CAN-Bus/CAN-Bus-2.pdf){width=60%} 
 
-![Aufbau-elektrisches-CAN-Datenbussystem, Quelle: Europa-Verlag SimKfz](images/CAN/Aufbau-elektrisches-CAN-Datenbussystem.png){width=60%} 
+![Aufbau-elektrisches-CAN-Datenbussystem, Quelle: Europa-Verlag](images/CAN-Bus/CAN-Bus-3.pdf){width=60%} 
 
 **Steuergerät** (Knoten, Busteilnehmer)
 
@@ -103,27 +122,29 @@ Steuergerät sendet Nachricht auf den Datenbus.
 
 1. **Transceiver** empfängt und sendet die Daten auf der Busleitung. Transmitter (Sender), Receiver (Empfänger)
 
+\newpage
+**Spannungspegel der CAN-Datenübertragung**
+
 Beim CAN-Bussystem werden die Informationen durch Spannungsänderungen in der Datenleitung übertragen. Dadurch empfangen alle Steuergeräte gleichzeitig die Informationen. Die Bits werden nacheinander übertragen (seriell).
 
-Zwei Leitungen
+**Zwei Leitungen**
 
 1. **High-Leitung** Beim Wechsel von rezessiven (Bit = 1) zum dominanten (Bit = 0) Pegel steigt die Spannung.
 1. **Low-Leitung** Beim Wechsel vom rezessiven (Bit = 1) zum dominanten (Bit = 0) Pegel sinkt die Spannung.
 
 
+![Spannungspegel, Quelle: Bosch](images/CAN-Bus/CAN-Bus-11.pdf){width=40%} 
 
-**CAN-Buspegel**
+**Steuern** "dominant" 0 überschreibt immer "rezessiv" 1 (tritt zurück) 
 
-![CAN-Highspeed-Buspegel, Quelle: [^2]](images/CAN/CAN-Highspeed-Buspegel.png){width=40%}
-
-![CAN-Lowspeed-Buspegel, Quelle: [^2]](images/CAN/CAN-Lowspeed-Buspegel.png){width=40%} 
-
-[^2]:<https://elearning.vector.com/mod/page/view.php?id=42>
+(dominant hat Vorrang, dann Datenübertragung)
 
 \newpage
 # Aufbau CAN-Nachricht - Datenprotokoll
 
-![Aufbau CAN-Botschaft, Quelle: Europa-Verlag SimKfz](images/CAN/Aufbau-CAN-Botschaft.png){width=60%} 
+Das Datenprotokoll bestimmt den Aufbau der Datenbotschaft und ist einheitlich festgelegt.
+
+![Aufbau CAN-Botschaft, Quelle: Europa-Verlag](images/CAN-Bus/CAN-Bus-1.pdf){width=60%} 
 
 1. Anfangsfeld (1 Bit)
     - Beginn der Botschaft
@@ -190,15 +211,24 @@ Test 99 < 128        // also 7-stellige Binärzahl
 
 Messung am OBD-Stecker direkt machen.
 
-**Messpunkte** CAN-High (Pin6) und CAN-Low (Pin14)
+**Messpunkte** CAN-High (PIN 6) und CAN-Low (PIN 14)
 
 **Gutbild** (CAN-Low-Signal & CAN-High-Signal sind spiegelverkehrt)
 
-![Fehlerfreies Signal CAN-Bus, Quelle: Europa-Verlag SimKfz](images/CAN/Fehlerfreies-Signal-CAN-Bus.png){width=40%} 
+![CAN-Bus, Quelle: Europa-Verlag](images/CAN-Bus/CAN-Bus-4.pdf){width=40%} 
 
-![Fehlermöglichkeiten CAN-Bus, Quelle: Europa-Verlag SimKfz](images/CAN/Fehlermoeglichkeiten-CAN-Bus.png){width=40%} 
+1. Signal CAN - High
+1. Signal CAN - Low
+1. Einstellung Spannung/Division Kanal1
+1. Einstellung Spannung/Division Kanal2
+1. CAN-Low, rezessiver Pegel, Bit 1
+1. CAN-Low, dominanter Pegel, Bit 0
+1. CAN-High, rezessiver Pegel, Bit 1
+1. CAN-High, dominanter Pegel, Bit 0
 
-![Fehler CAN-Bus, Quelle: Europa-Verlag Arbeitsblätter Kfz-Technik Lernfeld 9-14](images/CAN/Fehler-CAN-Bus.png){width=80%} 
+![Fehlermöglichkeiten CAN-Bus, Quelle: Europa-Verlag](images/CAN-Bus/CAN-Bus-10.pdf){width=40%} 
+
+![Fehler CAN-Bus, Quelle: Europa-Verlag](images/CAN-Bus/CAN-Bus-5.pdf){width=80%} 
 
 \newpage
 ## Keine Kommunikation zum SG möglich

@@ -1,4 +1,4 @@
-%ju 17-Sep-22 05-Datenbus.tex
+%ju 16-Dez-22 05-Datenbus.tex
 Quelle: Fabian Lindenberg, Kfz-Technik einfach erklärt \footnote{\url{https://www.youtube.com/watch?v=0a33FFpn_eM\&list=PLJXzCsL6HEwzoI3j8tGLKUHjLx0gTxus8}}
 
 \textbf{Früher} für jedes Signal eine Leitung $\to$ viele Kabel
@@ -69,6 +69,13 @@ Datenbussysteme mit unterschiedlichen Übertragungsgeschwindigkeiten.
 \section{Datenbusstrukturen - Topologie -
 Netzwerkstruktur}\label{datenbusstrukturen-topologie-netzwerkstruktur}
 
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.5\textwidth]{images/CAN-Bus/CAN-Bus-6.pdf}
+\caption{Datenbusstrukturen, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
+
 \begin{enumerate}
 \item
   \textbf{Sternstruktur:} (Gateway / Router $\leftrightarrow$ PC /
@@ -82,9 +89,9 @@ Netzwerkstruktur}\label{datenbusstrukturen-topologie-netzwerkstruktur}
     (Leitungsknoten in der Mitte)
   \end{itemize}
 \item
-  \textbf{Daisy-Chain:} Steuergeräte sind wie die Glieder einer Kette
-  aneinander gereiht. (Gateway $\to$ PC $\to$ PC $\to$ PC $\to$
-  TV)
+  \textbf{Daisy-Chain:} Steuergeräte sind wie die Glieder einer
+  Kette/Reihe aneinander gereiht. (Gateway $\to$ PC $\to$ PC $\to$
+  PC $\to$ TV)
 \item
   \textbf{Busstruktur / Linear:} CAN-Bus (Datenbusleitung, Knotenpunkte,
   $SG_1 \Longleftrightarrow SG_2 \Longleftrightarrow SG_3 \Longleftrightarrow SG_n$)
@@ -93,71 +100,107 @@ Netzwerkstruktur}\label{datenbusstrukturen-topologie-netzwerkstruktur}
   Lichtwellenleiter oder Steuergerät fällt die gesamte Kommunikation
   aus.
 \item
-  \textbf{Hybrid} (mehrere Busse)
+  \textbf{Hybrid} (mehrere Busse, Stern-Bus oder Stern-Ring)
 \item
-  \textbf{Maschen}
+  \textbf{Maschen} (hohe Ausfallsicherheit)
 \end{enumerate}
 
 \emph{Bemerkung:} Datenbusleitungen sind miteinander verdrillt (twisted
 pair), um elektromagnetische Auswirkungen von einem auf den anderen
 Draht zu minimieren. Durch die gegensätzliche Spannungsänderung heben
-sich die bei jeder Umschaltung entstehenden Magnetfelder beide Leitungen
-gegenseitig auf. Die Leitungen sind nach außen elektromagnetisch
-neutral. (\textbf{EMV} Elektromagnetischen Verträglichkeit)
-
-\begin{figure}[!ht]% hier: !ht
-\centering
-\includegraphics[width=0.9\textwidth]{images/CAN/Topologie-Datennetzwerk-Gesamtfahrzeug.png}
-\caption{Topologie-Datennetzwerk-Gesamtfahrzeug, Quelle: Europa-Verlag
-SimKfz}
-%\label{fig:}%% anpassen
-\end{figure}
+sich die bei jeder Umschaltung entstehenden Magnetfelder beider
+Leitungen gegenseitig auf. Die Leitungen sind nach außen
+elektromagnetisch neutral. (\textbf{EMV} Elektromagnetischen
+Verträglichkeit)
 
 \newpage
 
-\section{CAN Klassen}\label{can-klassen}
+\section{Klassifikation von
+Bussystemen}\label{klassifikation-von-bussystemen}
+
+\textbf{Nenne Merkmale des CAN-Datenbus}
 
 \begin{enumerate}
 \item
-  \textbf{CAN Class B} (Lowspeed)
+  \textbf{Klasse A}
 
   \begin{itemize}
   \item
-    bis ca. 125 kbit/s
+    LIN bis 10 kBit/s
   \item
-    \textbf{Eindrahtfähig} wenn die Datenkommunikation gegeben ist, auch
-    wenn eine Busleitung ausfällt
+    Vernetzung von Aktoren und Sensoren
+  \end{itemize}
+\item
+  \textbf{Klasse B} (Lowspeed-CAN, CAN-B, Komfortbereich)
+
+  \begin{itemize}
+  \item
+    bis 125 kBit/s
+  \item
+    \textbf{Eindrahtfähig} Datenkommunikation ist gegeben, auch wenn
+    eine Busleitung ausfällt
   \item
     keine Abschlusswiderstände
   \item
-    \textbf{Dominant 0} low: 1 V und high: 4 V
+    \textbf{Dominanter Pegel 0} low: 1,4 V und high: 3,6 V (Quelle:
+    Bosch S.1693, 30. Auflage)
   \item
-    \textbf{Rezessiv 1} low: 5 V und high: 0 V
+    \textbf{Rezessiver Pegel 1} low: 5 V und high: 0 V
   \end{itemize}
 \item
-  \textbf{CAN Class C} (Highspeed)
+  \textbf{Klasse C} (Highspeed-CAN, CAN-C, Antriebs- und
+  Fahrwerkbereich)
 
   \begin{itemize}
   \item
-    bis ca. 1 Mbit/s
+    Datenrate bis 1 MBit/s
   \item
     Nicht Eindrahtfähig
   \item
-    Abschlusswiderstände $2\text{x } 60~\Omega$
+    Abschlusswiderstand im Steuergerät
   \item
-    \textbf{Dominant 0} low: 1,5 V und high: 3,5 V
+    Leitungen sind verdrillt
   \item
-    \textbf{Rezessiv 1} low: 2,5 V und high: 2,5 V
+    CAN-High
+  \item
+    CAN-Low
+  \item
+    keine Potenzialverteiler
+  \item
+    oder Potenzialverteiler mit Abschlusswiderständen
+  \item
+    \textbf{Dominanter Pegel 0} low: 1,5 V und high: 3,5 V (Quelle:
+    Bosch S.1693, 30. Auflage)
+  \item
+    \textbf{Rezessiver Pegel 1} low: 2,5 V und high: 2,5 V
   \end{itemize}
 \item
   \textbf{CAN FD} (Flexible Data)
 
   \begin{itemize}
   \item
-    bis ca. 8 Mbit/s
+    bis ca. 8 MBit/s
   \item
     Erst wenn die Daten kommen, wird die Geschwindigkeit hoch
     geschaltet.
+  \end{itemize}
+\item
+  \textbf{Klasse C+}
+
+  \begin{itemize}
+  \item
+    FlexRay bis 10 MBit/s
+  \item
+    Antriebs- und Fahrwerkbereich
+  \end{itemize}
+\item
+  \textbf{Klasse D}
+
+  \begin{itemize}
+  \item
+    MOST, Ethernet ab 10 MBit/s
+  \item
+    Telematik-, Multimediabereich
   \end{itemize}
 \end{enumerate}
 
@@ -175,16 +218,15 @@ Steuergerät sendet Nachricht auf den Datenbus.
 
 \begin{figure}[!ht]% hier: !ht
 \centering
-\includegraphics[width=0.6\textwidth]{images/CAN/Aufbau-CAN-Datenbus.png}
-\caption{Aufbau CAN-Datenbus, Quelle: Europa-Verlag SimKfz}
+\includegraphics[width=0.6\textwidth]{images/CAN-Bus/CAN-Bus-2.pdf}
+\caption{Aufbau CAN-Datenbus, Quelle: Europa-Verlag}
 %\label{fig:}%% anpassen
 \end{figure}
 
 \begin{figure}[!ht]% hier: !ht
 \centering
-\includegraphics[width=0.6\textwidth]{images/CAN/Aufbau-elektrisches-CAN-Datenbussystem.png}
-\caption{Aufbau-elektrisches-CAN-Datenbussystem, Quelle: Europa-Verlag
-SimKfz}
+\includegraphics[width=0.6\textwidth]{images/CAN-Bus/CAN-Bus-3.pdf}
+\caption{Aufbau-elektrisches-CAN-Datenbussystem, Quelle: Europa-Verlag}
 %\label{fig:}%% anpassen
 \end{figure}
 
@@ -202,12 +244,16 @@ SimKfz}
   Transmitter (Sender), Receiver (Empfänger)
 \end{enumerate}
 
+\newpage
+
+\textbf{Spannungspegel der CAN-Datenübertragung}
+
 Beim CAN-Bussystem werden die Informationen durch Spannungsänderungen in
 der Datenleitung übertragen. Dadurch empfangen alle Steuergeräte
 gleichzeitig die Informationen. Die Bits werden nacheinander übertragen
 (seriell).
 
-Zwei Leitungen
+\textbf{Zwei Leitungen}
 
 \begin{enumerate}
 \item
@@ -218,35 +264,30 @@ Zwei Leitungen
   dominanten (Bit = 0) Pegel sinkt die Spannung.
 \end{enumerate}
 
-\textbf{CAN-Buspegel}
-
 \begin{figure}[!ht]% hier: !ht
 \centering
-\includegraphics[width=0.4\textwidth]{images/CAN/CAN-Highspeed-Buspegel.png}
-\caption[CAN-Highspeed-Buspegel, Quelle: ]{CAN-Highspeed-Buspegel,
-Quelle: \footnotemark{}}
+\includegraphics[width=0.4\textwidth]{images/CAN-Bus/CAN-Bus-11.pdf}
+\caption{Spannungspegel, Quelle: Bosch}
 %\label{fig:}%% anpassen
 \end{figure}
-\footnotetext{\url{https://elearning.vector.com/mod/page/view.php?id=42}}
 
-\begin{figure}[!ht]% hier: !ht
-\centering
-\includegraphics[width=0.4\textwidth]{images/CAN/CAN-Lowspeed-Buspegel.png}
-\caption[CAN-Lowspeed-Buspegel, Quelle: ]{CAN-Lowspeed-Buspegel, Quelle:
-\footnotemark{}}
-%\label{fig:}%% anpassen
-\end{figure}
-\footnotetext{\url{https://elearning.vector.com/mod/page/view.php?id=42}}
+\textbf{Steuern} >>dominant<< 0 überschreibt immer >>rezessiv<< 1 (tritt
+zurück)
+
+(dominant hat Vorrang, dann Datenübertragung)
 
 \newpage
 
 \section{Aufbau CAN-Nachricht -
 Datenprotokoll}\label{aufbau-can-nachricht-datenprotokoll}
 
+Das Datenprotokoll bestimmt den Aufbau der Datenbotschaft und ist
+einheitlich festgelegt.
+
 \begin{figure}[!ht]% hier: !ht
 \centering
-\includegraphics[width=0.6\textwidth]{images/CAN/Aufbau-CAN-Botschaft.png}
-\caption{Aufbau CAN-Botschaft, Quelle: Europa-Verlag SimKfz}
+\includegraphics[width=0.6\textwidth]{images/CAN-Bus/CAN-Bus-1.pdf}
+\caption{Aufbau CAN-Botschaft, Quelle: Europa-Verlag}
 %\label{fig:}%% anpassen
 \end{figure}
 
@@ -365,30 +406,48 @@ Test 99 < 128        // also 7-stellige Binärzahl
 
 Messung am OBD-Stecker direkt machen.
 
-\textbf{Messpunkte} CAN-High (Pin6) und CAN-Low (Pin14)
+\textbf{Messpunkte} CAN-High (PIN 6) und CAN-Low (PIN 14)
 
 \textbf{Gutbild} (CAN-Low-Signal \& CAN-High-Signal sind
 spiegelverkehrt)
 
 \begin{figure}[!ht]% hier: !ht
 \centering
-\includegraphics[width=0.4\textwidth]{images/CAN/Fehlerfreies-Signal-CAN-Bus.png}
-\caption{Fehlerfreies Signal CAN-Bus, Quelle: Europa-Verlag SimKfz}
+\includegraphics[width=0.4\textwidth]{images/CAN-Bus/CAN-Bus-4.pdf}
+\caption{CAN-Bus, Quelle: Europa-Verlag}
+%\label{fig:}%% anpassen
+\end{figure}
+
+\begin{enumerate}
+\item
+  Signal CAN - High
+\item
+  Signal CAN - Low
+\item
+  Einstellung Spannung/Division Kanal1
+\item
+  Einstellung Spannung/Division Kanal2
+\item
+  CAN-Low, rezessiver Pegel, Bit 1
+\item
+  CAN-Low, dominanter Pegel, Bit 0
+\item
+  CAN-High, rezessiver Pegel, Bit 1
+\item
+  CAN-High, dominanter Pegel, Bit 0
+\end{enumerate}
+
+\begin{figure}[!ht]% hier: !ht
+\centering
+\includegraphics[width=0.4\textwidth]{images/CAN-Bus/CAN-Bus-10.pdf}
+\caption{Fehlermöglichkeiten CAN-Bus, Quelle: Europa-Verlag}
 %\label{fig:}%% anpassen
 \end{figure}
 
 \begin{figure}[!ht]% hier: !ht
 \centering
-\includegraphics[width=0.4\textwidth]{images/CAN/Fehlermoeglichkeiten-CAN-Bus.png}
-\caption{Fehlermöglichkeiten CAN-Bus, Quelle: Europa-Verlag SimKfz}
-%\label{fig:}%% anpassen
-\end{figure}
-
-\begin{figure}[!ht]% hier: !ht
-\centering
-\includegraphics[width=0.8\textwidth]{images/CAN/Fehler-CAN-Bus.png}
-\caption{Fehler CAN-Bus, Quelle: Europa-Verlag Arbeitsblätter
-Kfz-Technik Lernfeld 9-14}
+\includegraphics[width=0.8\textwidth]{images/CAN-Bus/CAN-Bus-5.pdf}
+\caption{Fehler CAN-Bus, Quelle: Europa-Verlag}
 %\label{fig:}%% anpassen
 \end{figure}
 

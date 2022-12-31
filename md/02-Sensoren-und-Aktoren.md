@@ -8,10 +8,11 @@ lang: "de"
 bibliography: literatur-kfz.bib 
 csl: zitierstil-number.csl
 ---
-<!-----------------------------+
-ju 13-8-22
-Keywords - Sensoren und Aktoren
-+------------------------------>
+<!-------------------------------------------------------------------+
+Dozent: Hermann
+![, Quelle: Europa-Verlag](images/Sensoren/Sensoren-1.pdf){width=40%}
+ju 6-10-22 Sensoren und Aktoren
++-------------------------------------------------------------------->
 
 **Sensoren** erfassen physikalische Effekte (Druck, Temperatur) und wandeln diese in elektrische Signale um. (Sinne des Autos) 
 
@@ -47,6 +48,8 @@ Die **Pulsweitenmodulation** (PWM) ist eine digitale Modulationsart, bei der ein
 
 **P-Leiter und N-Leiter**
 
+![Elektronenstrom und Löcherstrom, Quelle: Europa-Verlag](images/Sensoren/Sensoren-1.pdf){width=40%}
+
 1. **P-Leiter** entsteht, wenn das Leitermaterial Silizium verunreinigt wird mit Bohr und bei *Elektronenmangel* enthält es freie positive Ladungen. Löcherstrom
 
 2. **N-Leiter** entsteht, wenn das Leitermaterial Silizium verunreinigt wird mit Phosphor und bei *Elektronenüberschuss* enthält es freie negative Ladungen. Elektronenstrom
@@ -56,11 +59,12 @@ $\to$ Legt man an den Halbleiterkristall eine elektrische Spannung an, dann komm
 
 # Halbleiterwiderstände NTC und PTC
 
+![NTC und PTC, Quelle: Europa-Verlag](images/Sensoren/Sensoren-2.pdf){width=40%}
+
 1. **Heißleiter** $\to$ NTC-Widerstände bis $250^\circ\text{C}$
     - *negativer Temperatur-Koeffizient* $\to$ fallender Widerstand bei steigender Temperatur $\uparrow \downarrow$ 
     - vgl. Kennlinie (x = Temperatur, y = Widerstand) 
     - **Anwendung:** Temperatursensoren (Kühlmittel-, Kraftstoff-, Luft-, Motortemperaturfühler)
-    - Schaltsymbol
     - typische Werte: Kalt: $2 - 4~k\Omega$ und Warm: $200 - 400~\Omega$
     - *Leitfähigkeit* steigt mit zunehmender Temperatur 
     - Widerstand und Spannungsfall am NTC werden kleiner 
@@ -69,7 +73,6 @@ $\to$ Legt man an den Halbleiterkristall eine elektrische Spannung an, dann komm
     - *positiver Temperatur-Koeffizient* $\to$ zunehmender Widerstand bei steigender Temperatur $\uparrow \uparrow$ 
     - vgl. Kennlinie (x = Temperatur, y = Widerstand) 
     - **Anwendung:** Hochtemperaturbereich (Diesel-Abgastemperatursensoren), Glühkerzen, Heizungen von Lambdasonden
-    - Schaltsymbol
     - *Leitfähigkeit* verringert sich mit zunehmender Temperatur
     - Widerstand und Spannungsfall am PTC werden größer 
     - "Je höher der Widerstand, desto geringer der Stromfluss."
